@@ -1,0 +1,109 @@
+
+
+/* Container for the overall dashboard */
+.dashboard-container {
+    width: 100%; /* Take full width of the browser */
+    padding: 20px 20px; /* Optional: Add padding to keep content away from edges */
+}
+
+
+/* Styling for the title */
+.dashboard-title {
+    text-align: left;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #333;
+    margin-left: 55px;
+}
+
+/* Input and button styling */
+.input-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px; /* Space between input and button */
+    margin-left: 55px;
+}
+
+.text-input {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 3fr 1fr;   /* Two rows of equal height */
+    gap: 20px;                       /* Space between grid items */
+    margin-top: 20px;                /* Space above grid */
+    width: 100%;                     /* Full width of dashboard container */
+    height: 700px;
+}
+
+/* Styling for each individual grid item */
+.grid-item {
+    background-color: #eaeaea;
+    padding: 0px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Specific grid areas */
+#scatter-plot {
+    grid-column: 1 / span 4; 
+    grid-row: 1 / span 3;
+    background-color: #FFFFFF;
+    
+}
+
+#info-box {
+    grid-column: 5/span 1;
+    grid-row: 1 / span 3;
+    background-color: #ffffff;
+    padding: 0px;
+    text-align: top;
+    margin-right:0;
+}
+
+
+
+
+
+/* Styling for the slope value */
+.slope-highlight {
+    font-size: 2em;      /* Large font size */
+    font-weight: bold;
+    color: red;          /* Red color for emphasis */
+    display: block;      /* Separate line */
+    margin-bottom: 4px;
+}
+
+/* Styling for the description text */
+.description {
+    font-size: 1.2em;    /* Smaller font size */
+    color: #555;         /* Grey color for readability */
+    margin-bottom: 4px;
+}
+
+/* Styling for the ZIP code */
+.zip-highlight {
+    font-size: 2em;      /* Large font size */
+    font-weight: bold;
+    color: #333;         /* Black color for emphasis */
+    display: block;      /* Separate line */
+}
+
+
+.interactive-plot {
+    width: 100%;         /* Full width of container */
+    height: 100%;       /* Set height of iframe */
+    border: none;        /* Remove border */
+}
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>housing dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+
+<body>
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <h1 class="dashboard-title">Price per Area of Houses Listed for Rent on Craigslist</h1>
+        
+         <!-- Form for capturing ZIP code input -->
+        <form action="{{ url_for('submit') }}" method="POST" class="input-container">
+            <input type="text" name="user_query" placeholder="Enter a City" class="text-input" required />
+            <button type="submit" class="btn">Go</button>
+        </form>
+        
+        
+        <!--Grid container and its items-->
+        <div class="grid-container">
+            
+            <!-- Scatter plot grid item -->
+            <div class="grid-item" id="scatter-plot">
+                 <iframe class="interactive-plot" 
+                         src="{{ url_for('static', filename='images/nonsenseplot_interactive.html') }}">
+                 </iframe>
+            </div>
+            
+            
+            
+            <div class="grid-item" id="info-box">
+                
+                    <p class="slope-highlight">${{ slope | round(2) }}/sqft</p>
+                    <p class="description">is the average cost for homes in</p>
+                    <p class="zip-highlight">{{ user_query }}</p>
+                    <br>
+                    <img src="{{ url_for('static', filename='images/sqft_histogram.png') }}" alt="Square Foot Histogram">
+                    <br>
+                    <img src="{{ url_for('static', filename='images/price_histogram.png') }}" alt="Square Foot Histogram">
+            </div>
+            </div>
+            
+            <!-- histogram1 grid item --> 
+
+
+            
+            
+        </div>
+
+    </div>
+    
+    
+    
+</body>
+</html>
+
